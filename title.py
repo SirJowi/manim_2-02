@@ -5,7 +5,7 @@ class static_title(Scene):
         tud_darkblue = "#00305e"
         tud_lightblue = "#006ab3"
 
-        background = Rectangle(color=tud_darkblue, fill_opacity=1.0, height=1366, width=768, stroke_width=0)
+        background = Rectangle(color=tud_darkblue, fill_opacity=1.0, height=1920, width=1080, stroke_width=0, sheen_factor=0.2, sheen_direction=np.array([1., 1, 0.]))
         self.add(background)
 
         header = Rectangle(color=WHITE, fill_opacity=1.0, width=768, height=2.8)
@@ -33,7 +33,12 @@ class static_title(Scene):
         institute_text.set_x(-4.95)
         self.add(institute_text)
 
-        institute_text = Text("Institut für Statik und Dynamik", font_size=16, font="OpenSans", color="#FFFFFF")
-        institute_text.set_y(2.0)
-        institute_text.set_x(-4.0)
-        self.add(institute_text)
+        text = Text("Vorname, Name", font_size=16, font="OpenSans", color="#FFFFFF")
+        text.set_y(1.0)
+        self.add(text)
+
+        title = Text("Titel der Präsentation", font_size=32, font="OpenSans", color="#FFFFFF", weight=BOLD)
+
+        textblock = VGroup(institute_text, text, title)
+        textblock.arrange(DOWN, buff=1.5, center=False, aligned_edge=LEFT)
+        self.add(textblock)
