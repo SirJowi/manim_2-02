@@ -1,10 +1,12 @@
 from manim import *
 from datetime import *
+from manim_fonts import *
 
 
 class static_title(Scene):
     def construct(self):
-        Text.set_default(font="Open Sans")
+        with RegisterFont("Open Sans") as fonts:
+            Text.set_default(font=fonts[0])
 
         # background with blue gradient on the title-master
         background_gradient = ImageMobject("background_gradient.png")
@@ -23,7 +25,7 @@ class static_title(Scene):
 
         # first textblock with name and institution
         name = Text("Johannes, Storm",
-                    font_size=16, font="OpenSans", weight=BOLD, fill_opacity=0.6)
+                    font_size=16, weight=BOLD, fill_opacity=0.6)
         institute = Text("Institut für Statik und Dynamik",
                          font_size=16, fill_opacity=0.6)
 
@@ -53,3 +55,8 @@ class static_title(Scene):
         textblock_3.arrange(DOWN, center=False, aligned_edge=LEFT)
         textblock_3.set_y(-2.18)
         self.add(textblock_3)
+
+
+        with RegisterFont("Poppins") as fonts:
+            a = Text("Hello World", font=fonts[0])
+            self.play(Write(a))
