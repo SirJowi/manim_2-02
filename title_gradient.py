@@ -8,15 +8,23 @@ class static_title(Scene):
         self.add(background_gradient)
 
         # logo from the TUD in dark blue in the upper left corner
-        tud_logo = ImageMobject("TUD_Logo_HKS41_57.png")
-        tud_logo.set_y(3.275)
+        tud_logo = ImageMobject("TUD_Logo_HKS41_228.png")
         tud_logo.set_x(-5.7)
-        tud_logo.scale(0.42)
+        tud_logo.set_y(3.275)
+        tud_logo.scale(0.105)
         self.add(tud_logo)
 
+        # logo from the isd
+        isd_logo = ImageMobject("logo_isd_weiss.png")
+        isd_logo.set_x(5)
+        isd_logo.set_y(-2.8)
+        isd_logo.scale(0.15)
+        self.add(isd_logo)
+
+        # setting up default font
         Text.set_default(font="Open Sans")
 
-        # placeholder that allows to left align a VGroup (invisible dot, that has the correct x-coordinate)
+        # placeholder that allows to align a VGroup (invisible dot, that has the correct x-coordinate)
         align_left = Text(".", fill_opacity=0)
         align_left.set_x(-6)
 
