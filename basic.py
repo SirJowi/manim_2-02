@@ -25,6 +25,7 @@ class static_basic(Scene):
         align_left = Text(".", fill_opacity=0)
         align_left.set_x(-4.15)
 
+
         # first textblock with name and institution
         timestamp = datetime.today().strftime('%d. %B %Y')
         title = Text("Mastertitel - Titelzusatz",
