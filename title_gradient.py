@@ -21,6 +21,13 @@ class static_title(Scene):
         isd_logo.scale(0.15)
         self.add(isd_logo)
 
+        # logo from dresden concept
+        ddc_logo = SVGMobject("DDc-Logo-mini_cmyk.svg")
+        ddc_logo.set_x(5.85)
+        ddc_logo.set_y(3.3)
+        ddc_logo.scale(0.32)
+        self.add(ddc_logo)
+
         # setting up default font
         Text.set_default(font="Open Sans")
 
