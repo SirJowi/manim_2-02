@@ -16,10 +16,10 @@ class static_title(Scene):
         header_stripe.set_y(2.68)
         self.add(header_stripe)
 
-        tud_logo = ImageMobject("TUD_Logo_HKS41_57.png")
+        tud_logo = ImageMobject("TUD_Logo_HKS41_228.png")
         tud_logo.set_y(3.3)
         tud_logo.set_x(-5.8)
-        tud_logo.scale(0.4)
+        tud_logo.scale(0.1)
         self.add(tud_logo)
 
         isd_logo = ImageMobject("logo_isd_weiss.png")
