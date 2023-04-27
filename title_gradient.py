@@ -1,5 +1,6 @@
 from manim import *
 from datetime import *
+from manim.opengl import *
 
 class static_title(Scene):
     def construct(self):
